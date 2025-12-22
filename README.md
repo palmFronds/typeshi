@@ -1,1 +1,1 @@
-# typeshi
+This is hypothesizing the brokerage-native activation layer.
