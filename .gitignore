@@ -23,3 +23,6 @@ pnpm-debug.log*
 
 # typeScript build artifacts
 *.tsbuildinfo
+
+# all the vercel stuff
+.vercel
