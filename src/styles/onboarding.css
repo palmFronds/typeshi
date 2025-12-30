@@ -1,0 +1,334 @@
+.onboarding-container {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FF8C00 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  box-sizing: border-box;
+  position: relative;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+}
+
+.onboarding-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  max-width: 700px;
+}
+
+.onboarding-title {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: white;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0 0 1rem 0;
+}
+
+.onboarding-subtitle {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: white;
+  opacity: 0.95;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.onboarding-choices {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 900px;
+  width: 100%;
+}
+
+.choice-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.choice-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.choice-card:focus {
+  outline: 3px solid rgba(255, 140, 0, 0.5);
+  outline-offset: 2px;
+}
+
+.choice-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #FF8C00;
+  margin: 0 0 0.5rem 0;
+}
+
+.choice-subtitle {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #FF8C00;
+  opacity: 0.85;
+  margin: 0;
+}
+
+.onboarding-footer {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 2rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: white;
+  opacity: 0.8;
+}
+
+/* Responsive: Mobile (<768px) */
+@media (max-width: 767px) {
+  .onboarding-container {
+    padding: 2rem;
+  }
+
+  .onboarding-title {
+    font-size: 2rem;
+  }
+
+  .onboarding-choices {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .choice-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .onboarding-footer {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin-top: 2rem;
+    text-align: center;
+  }
+}
+
+/* Responsive: Tablet (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .onboarding-container {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .choice-card {
+    padding: 2.5rem 1.5rem;
+  }
+}
+
+/* Transition screen */
+.transition-container {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.transition-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.transition-title {
+  font-size: 5rem;
+  font-weight: 700;
+  color: white;
+  text-transform: lowercase;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.transition-subtitle {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  opacity: 0.95;
+  text-transform: lowercase;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .transition-title {
+    font-size: 3.5rem;
+  }
+
+  .transition-subtitle {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .transition-title {
+    font-size: 2.5rem;
+  }
+
+  .transition-subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .transition-title,
+  .transition-subtitle {
+    animation: none !important;
+  }
+}
+
+/* Progress Bar */
+.progress-bar-container {
+  width: 320px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  margin: 0 auto 3rem auto;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: white;
+  border-radius: 2px;
+}
+
+/* Question Screens */
+.question-screen {
+  justify-content: flex-start;
+  padding-top: 3rem;
+}
+
+.hesitation-overlay {
+  background:
+    radial-gradient(ellipse at top left, rgba(139, 69, 19, 0.3) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom right, rgba(205, 92, 92, 0.25) 0%, transparent 50%),
+    linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FF8C00 100%);
+}
+
+.risk-overlay {
+  background: linear-gradient(135deg, #FFA500 0%, #FF8C00 50%, #FF6B00 100%);
+}
+
+/* Question Header */
+.question-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  flex-shrink: 0;
+}
+
+.question-title {
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: white;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0 0 1rem 0;
+}
+
+.question-title u {
+  text-underline-offset: 0.2em;
+}
+
+.question-subtext {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: white;
+  opacity: 0.95;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.question-subtext em {
+  font-style: italic;
+}
+
+.question-subtext strong {
+  font-weight: 600;
+}
+
+/* Card Grid */
+.question-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Question Cards */
+.question-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+.question-card:focus {
+  outline: 3px solid rgba(255, 140, 0, 0.5);
+  outline-offset: 2px;
+}
+
+.question-card.selected {
+  background: rgba(255, 255, 255, 1);
+  border: 2px solid #FF8C00;
+}
+
+.card-title {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #FF6B00;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.card-subtitle {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #FF8C00;
+  opacity: 0.8;
+  line-height: 1.4;
+}
+
+/* Question Screen Responsive */
+@media (max-width: 768px) {
+  .question-title {
+    font-size: 2.5rem;
+  }
+
+  .question-subtext {
+    font-size: 1.1rem;
+  }
+
+  .question-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .progress-bar-container {
+    width: 260px;
+  }
+}

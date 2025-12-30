@@ -6,7 +6,7 @@ This repository contains a lightweight MVP used to test a single behavioral hypo
 
 ## Deployment
 
-**Live:** https://typeshi.vercel.app
+**Live:** https://typeshi-ruby.vercel.app
 
 **Test iframe embedding:** Open `test-embed.html` locally after deployment.
 

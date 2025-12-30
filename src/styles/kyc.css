@@ -1,0 +1,368 @@
+.kyc-container {
+  min-height: 100vh;
+  background: #f5f7fa;
+  position: relative;
+  overflow-y: auto;
+  padding-bottom: 100px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+}
+
+/* Progress Bar */
+.kyc-progress-bar {
+  background: white;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.kyc-progress-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #6b7280;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.kyc-progress-fill-container {
+  width: 200px;
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.kyc-progress-fill {
+  width: 80%;
+  height: 100%;
+  background: linear-gradient(90deg, #10b981, #34d399);
+  border-radius: 3px;
+  transition: width 0.6s ease;
+}
+
+.kyc-next-step {
+  color: #9ca3af;
+  font-size: 0.875rem;
+}
+
+/* Header */
+.kyc-header {
+  background: white;
+  padding: 2rem;
+  text-align: center;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.kyc-header h1 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+/* Background Form */
+.kyc-background-form {
+  padding: 3rem;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  opacity: 0.4;
+  pointer-events: none;
+  filter: blur(1px);
+}
+
+.form-section {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e5e7eb;
+}
+
+.form-section-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #374151;
+  margin: 0 0 1.5rem 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #f3f4f6;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-row:last-child {
+  margin-bottom: 0;
+}
+
+.form-row.single {
+  grid-template-columns: 1fr;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.form-input {
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.9375rem;
+  background: #f9fafb;
+  color: #9ca3af;
+}
+
+/* Glassmorphic Document Card */
+.kyc-document-card {
+  position: fixed;
+  top: 25%;
+  left: 27%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 600px;
+  max-height: 60vh;
+  overflow-y: auto;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.12),
+    0 0 0 1px rgba(255, 255, 255, 0.8) inset;
+  z-index: 10;
+}
+
+.document-card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 2rem 0;
+  text-align: center;
+}
+
+.document-section {
+  margin-bottom: 2rem;
+}
+
+.document-section:last-of-type {
+  margin-bottom: 0;
+}
+
+.document-section-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.document-uploads {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.document-upload-item {
+  background: #f9fafb;
+  border: 2px dashed #d1d5db;
+  border-radius: 12px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.document-upload-item.uploaded {
+  background: #f0fdf4;
+  border-color: #86efac;
+  border-style: solid;
+}
+
+.document-upload-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #6b7280;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.document-upload-status {
+  font-size: 0.8125rem;
+  color: #9ca3af;
+}
+
+.document-upload-item.uploaded .document-upload-status {
+  color: #16a34a;
+  font-weight: 500;
+}
+
+.document-upload-item.uploaded::after {
+  content: '✓';
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 20px;
+  height: 20px;
+  background: #16a34a;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+/* Complete Button */
+.kyc-complete-button {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #FF8C00 0%, #FF6B00 100%);
+  color: white;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 2rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 16px rgba(255, 140, 0, 0.3);
+}
+
+.kyc-complete-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 140, 0, 0.4);
+}
+
+.kyc-complete-button:active {
+  transform: translateY(0);
+}
+
+.kyc-complete-button.loading {
+  cursor: not-allowed;
+  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.kyc-complete-button.loading:hover {
+  transform: none;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Privacy Disclaimer */
+.kyc-disclaimer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  padding: 1.5rem;
+  border-top: 1px solid #e5e7eb;
+  text-align: center;
+  z-index: 5;
+}
+
+.kyc-disclaimer-text {
+  font-size: 0.8125rem;
+  color: #9ca3af;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.kyc-disclaimer-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background: #10b981;
+  color: white;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .kyc-background-form {
+    padding: 2rem 1.5rem;
+  }
+
+  .kyc-document-card {
+    padding: 1.5rem;
+    width: 95%;
+    max-height: 75vh;
+  }
+
+  .document-card-title {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .document-section {
+    margin-bottom: 1.5rem;
+  }
+
+  .document-upload-item {
+    padding: 1rem 0.75rem;
+  }
+
+  .kyc-complete-button {
+    margin-top: 1.5rem;
+    padding: 0.875rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .kyc-progress-indicator {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .kyc-progress-fill-container {
+    width: 150px;
+  }
+
+  .kyc-header h1 {
+    font-size: 1.5rem;
+  }
+}
