@@ -38,8 +38,7 @@ export default function LandingPage() {
             Solving <em>the</em> retail brokerage onboarding problem.
           </h1>
           <p className="hero-subheadline">
-          Picture a brokerage-native, learning layer designed exclusively to minimize user 
-          disengagement after onboarding.
+            A brokerage-native layer built for the exact moments users hesitate.  
           </p>
           <p className="hero-status">
             Currently running pilot partnerships with brokerages and related platforms!
@@ -79,9 +78,9 @@ export default function LandingPage() {
           <h2 className="section-header">Here's the issue we're solving.</h2>
           <p className="section-body">
             Retail users don't fail to activate because they lack access: they fail because
-            they're unfamiliar and afraid. Overwhelming interfaces, unfamiliar terminology,
-            and immediate pressure to act with real money. The result: drop-off before or
-            just after their first trade, costing brokerages downstream revenue.
+            they're unfamiliar and afraid. Overwhelming interfaces, unfamiliar experience flows,
+            and immediate pressure to act with real money. The result? Drop-off before or
+            just after their first trade, costing brokerages tons of downstream revenue.
           </p>
         </motion.div>
       </section>
@@ -95,11 +94,11 @@ export default function LandingPage() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="section-header">That's where we come in.</h2>
+          <h2 className="section-header"><em>That's</em> where we come in.</h2>
           <p className="section-body">
-            MoMoney sits inside your brokerage's post-verification flow, guiding new users 
-            through constrained interactions that mirror the real platform. Concepts appear
-            only when tied to visible UI: building confidence before capital is at risk.
+            moMoney sits inside your brokerage's post-verification flow, guiding new users 
+            through constrained interactions that mirror the real platform. Building confidence
+            before any real capital is at risk to solve this problem.
           </p>
         </motion.div>
         <motion.div
@@ -129,11 +128,11 @@ export default function LandingPage() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="pilot-title">How a Pilot Works</h2>
+          <h2 className="pilot-title">How Our Pilot Works</h2>
           <p className="pilot-description">
-            We embed directly into your onboarding flow. The experience
-            is sandboxed, short-term, and fully reversible. No persistent
-            copilots, no heavy integrations.
+          We embed a brief, sand-boxed experience directly into your onboarding flow: via 
+          a <em>light-weight iframe surface</em>. The pilot can be launched, measured, and 
+          removed easily and without even touching core product behavior.
           </p>
           <div className="pilot-attributes">
             <div className="attribute-card">
@@ -143,9 +142,9 @@ export default function LandingPage() {
                   <path d="M9 9h6v6H9z" />
                 </svg>
               </div>
-              <h3 className="attribute-title">Embedded</h3>
+              <h3 className="attribute-title">1. Embedded</h3>
               <p className="attribute-text">
-                Sits within your existing brokerage UI. No separate apps or redirects.
+                Runs inside your existing UI. No redirects, separate or new apps.
               </p>
             </div>
             <div className="attribute-card">
@@ -155,9 +154,10 @@ export default function LandingPage() {
                   <path d="M12 7v5l3 3" />
                 </svg>
               </div>
-              <h3 className="attribute-title">Short-Term</h3>
+              <h3 className="attribute-title">2. Time-boxed</h3>
               <p className="attribute-text">
-                A 5-7 minute guided experience. Users complete one action, then move on.
+                Adds <em>no</em> friction: a 5-7 minute guided experience, and then 
+                users move on.
               </p>
             </div>
             <div className="attribute-card">
@@ -166,9 +166,9 @@ export default function LandingPage() {
                   <path d="M3 12h4l3-9 4 18 3-9h4" />
                 </svg>
               </div>
-              <h3 className="attribute-title">Sandbox</h3>
+              <h3 className="attribute-title">3. Isolated</h3>
               <p className="attribute-text">
-                Safe environment for first actions. Real learning, minimal risk.
+                Operates in a controlled environment, picture no irreversible outcomes.
               </p>
             </div>
             <div className="attribute-card">
@@ -177,12 +177,13 @@ export default function LandingPage() {
                   <path d="M4 12h16M4 12l4-4m-4 4l4 4m12-4l-4-4m4 4l-4 4" />
                 </svg>
               </div>
-              <h3 className="attribute-title">Reversible</h3>
+              <h3 className="attribute-title">4. Easily killed</h3>
               <p className="attribute-text">
-                Optional and interruptible. Users can exit at any point.
+                Fully interruptible. It can be disabled instantly: there's never any residual impact.
               </p>
             </div>
           </div>
+          <p className="pilot-tagline">Built to <em>compound</em> the downstream revenue of retail brokerages.</p>
         </motion.div>
       </section>
 

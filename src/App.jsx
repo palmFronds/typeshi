@@ -2,9 +2,7 @@ import React from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import LandingPage from './screens/landing/LandingPage';
-import KYCSimulation from './screens/kyc/KYCSimulation';
-import Welcome from './screens/onboarding/Welcome';
-import Transition from './screens/onboarding/Transition';
+import DemoPlaceholder from './screens/demo/DemoPlaceholder';
 
 export default function App() {
   const location = useLocation();
@@ -13,9 +11,7 @@ export default function App() {
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/demo" element={<KYCSimulation />} />
-        <Route path="/onboarding/welcome" element={<Welcome />} />
-        <Route path="/onboarding/transition" element={<Transition />} />
+        <Route path="/demo" element={<DemoPlaceholder />} />
       </Routes>
     </AnimatePresence>
   );

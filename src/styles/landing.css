@@ -101,7 +101,7 @@
   color: #a3a3a3;
   line-height: 1.6;
   margin: 0 0 1.25rem 0;
-  max-width: 610px;
+  max-width: 6000px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -281,10 +281,10 @@
 }
 
 .pilot-description {
-  font-size: 1rem;
+  font-size: 1.05rem;
   color: #a3a3a3;
   line-height: 1.6;
-  max-width: 560px;
+  max-width: 680px;
   margin: 0 auto 3rem;
 }
 
@@ -332,6 +332,14 @@
   color: #737373;
   line-height: 1.6;
   margin: 0;
+}
+
+.pilot-tagline {
+  font-size: 0.975rem;
+  color: #f97316;
+  margin: 2.5rem 0 0 0;
+  text-align: center;
+  letter-spacing: 0.01em;
 }
 
 /* Contact Section */
