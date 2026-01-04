@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+/* KYC Design Tokens */
+@theme {
+  --color-kyc-bg: #0a0a0a;
+  --color-kyc-surface: #1a1a1a;
+  --color-kyc-surface2: #2a2a2a;
+  --color-kyc-border: #333333;
+  --color-kyc-text: #e5e5e5;
+  --color-kyc-muted: #a3a3a3;
+  --color-kyc-primary: #4a90e2;
+  --color-kyc-primaryHover: #5a9ee8;
+  --color-kyc-focusRing: rgba(74, 144, 226, 0.4);
+
+  --radius-kyc: 8px;
+  --shadow-kyc: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* KYC-specific base styles */
+.kyc-page {
+  min-height: 100vh;
+  background-color: var(--color-kyc-bg);
+  color: var(--color-kyc-text);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Prevent scrollbars during page transitions */
+.kyc-page-transition {
+  overflow: hidden;
+}
